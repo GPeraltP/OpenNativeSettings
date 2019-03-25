@@ -1,0 +1,31 @@
+{
+  "name": "open-native-settings",
+  "version": "0.0.1",
+  "description": "Native settings opener for Cordova",
+  "cordova": {
+    "id": "open-native-settings",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GPeraltP/OpenNativeSettings"
+  },
+  "keywords": [
+    "native-settings",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": {
+    "cordovaDependencies": {
+      "1.5.0": {
+        "cordova": ">4.0.0"
+      }
+    }
+  },
+  "author": "Gerson Peralta <gperaltp@everis.com>",
+  "homepage": "https://github.com/GPeraltP/OpenNativeSettings"
+}
