@@ -9,6 +9,7 @@
 	<license>MIT</license>
 
 	<keywords>cordova,android,ios,settings</keywords>
+	<repo>https://github.com/GPeraltP/OpenNativeSettings.git</repo>
 
 	<engines>
 		<engine name="cordova" version=">=4.0.0" />
