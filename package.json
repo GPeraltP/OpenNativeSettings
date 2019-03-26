@@ -1,31 +1,29 @@
 {
-  "name": "open-native-settings",
+  "name": "cordova-native-settings",
   "version": "0.0.1",
-  "description": "Native settings opener for Cordova",
+  "description": "An Android Cordova plugin that allows users to display OS Settings.",
   "cordova": {
-    "id": "open-native-settings",
+    "id": "cordova-native-settings",
     "platforms": [
-      "android",
-      "ios"
+      "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GPeraltP/OpenNativeSettings"
+    "url": "git+https://github.com/GPeraltP/OpenNativeSettings.git"
   },
   "keywords": [
-    "native-settings",
+    "Settings",
     "ecosystem:cordova",
-    "cordova-android",
-    "cordova-ios"
+    "cordova-android"
   ],
-  "engines": {
-    "cordovaDependencies": {
-      "1.5.0": {
-        "cordova": ">4.0.0"
-      }
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
     }
-  },
+  ],
   "author": "Gerson Peralta <gperaltp@everis.com>",
-  "homepage": "https://github.com/GPeraltP/OpenNativeSettings"
+  "license": "MIT",
+  "homepage": "https://github.com/GPeraltP/OpenNativeSettings/"
 }
