@@ -10,7 +10,7 @@ NativeSettings.prototype.open = function( setting, successCallback, errorCallbac
 }
 
 // Installation constructor that binds ToastyPlugin to window
-ToastyPlugin.install = function() {
+NativeSettings.install = function() {
   if (!window.plugins) {
     window.plugins = {};
   }
