@@ -20,6 +20,7 @@ import org.json.JSONObject;
 public class NativeSettings extends CordovaPlugin {
   Intent intent;
   Context context;
+
   @Override
   public boolean execute(String action, JSONArray args,
     final CallbackContext callbackContext) {
@@ -29,12 +30,26 @@ public class NativeSettings extends CordovaPlugin {
         callbackContext.error("\"" + action + "\" is not a recognized action.");
         return false;
       }
-      //Create new Intent
+
+
+      String setting;
+
+      try {
+        JSONObject options = args.getJSONObject(0);
+        setting = options.getString("setting");
+      } catch (JSONException e) {
+        callbackContext.error("Error encountered: " + e.getMessage());
+        return false;
+      }
+
       context=this.cordova.getActivity().getApplicationContext();
 
-      intent = new Intent(android.provider.Settings.ACTION_WIFI_SETTINGS);
+      if (setting.equals("wifi")) {
+        //Create new Intent
+        intent = new Intent(android.provider.Settings.ACTION_WIFI_SETTINGS);
+      }
 
-      this.cordova.getActivity().startActivity(intent);
+      this.cordova.getActivity().startActivity(intent); 
 
       // Send a positive result to the callbackContext
       PluginResult pluginResult = new PluginResult(PluginResult.Status.OK);
