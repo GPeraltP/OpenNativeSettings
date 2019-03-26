@@ -5,7 +5,8 @@
   "cordova": {
     "id": "cordova-native-settings",
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   },
   "repository": {

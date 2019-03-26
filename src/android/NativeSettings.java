@@ -47,6 +47,14 @@ public class NativeSettings extends CordovaPlugin {
       if (setting.equals("wifi")) {
         //Create new Intent
         intent = new Intent(android.provider.Settings.ACTION_WIFI_SETTINGS);
+      }else if(setting.equals("location")){
+
+        intent = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+      }else{
+            // Send a positive result to the callbackContext
+            PluginResult pluginResult = new PluginResult(PluginResult.Status.INVALID_ACTION);
+            callbackContext.sendPluginResult(pluginResult);
+            return false;
       }
 
       this.cordova.getActivity().startActivity(intent); 

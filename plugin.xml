@@ -17,6 +17,8 @@
     <js-module src="www/nativeSettings.js" name="nativeSettings">
         <clobbers target="window.plugins.nativeSettings" />
     </js-module>
+
+    <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="NativeSettings">
@@ -26,4 +28,17 @@
 
         <source-file src="src/android/NativeSettings.java" target-dir="src/com/gperalta/cordova/plugin" />
     </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="NativeSettings">
+                <param name="ios-package" value="NativeSettings"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/NativeSettings.h" />
+        <source-file src="src/ios/NativeSettings.m" />
+    </platform>
+
 </plugin>
