@@ -2,14 +2,14 @@
 #import <Cordova/CDVPlugin.h>
 
 @implementation NativeSettings
-
+/*
 - (BOOL)do_open{
 	if ([[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]]) {
 		return YES;
 	} else {
 		return NO;
 	}
-}
+} */
 
 - (void)open:(CDVInvokedUrlCommand*)command
 {
@@ -25,7 +25,8 @@
     } */
 
 	if ([key isEqualToString:@"wifi"]) {
-		result = [self do_open:[]];
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+		result = YES;
 	} else {
 		pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Invalid Action"];
 	}
