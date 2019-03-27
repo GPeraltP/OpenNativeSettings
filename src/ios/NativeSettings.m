@@ -32,6 +32,7 @@
 										   		result = YES;
 										   }
 		];
+		result = YES;
 		//[[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
 		
 	} else {
