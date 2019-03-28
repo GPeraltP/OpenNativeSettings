@@ -8,7 +8,7 @@ NativeSettings.open = function( setting, successCallback, errorCallback) {
   cordova.exec(successCallback, errorCallback, 'NativeSettings', 'open', [options]);
 }
 
-// Installation constructor that binds ToastyPlugin to window
+/* // Installation constructor that binds ToastyPlugin to window
 NativeSettings.install = function() {
   if (!window.plugins) {
     window.plugins = {};
@@ -16,6 +16,6 @@ NativeSettings.install = function() {
   window.plugins.nativeSettings = new NativeSettings();
   return window.plugins.nativeSettings;
 };
-cordova.addConstructor(NativeSettings.install);
+cordova.addConstructor(NativeSettings.install); */
 
 module.exports = NativeSettings;

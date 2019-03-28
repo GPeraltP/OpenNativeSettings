@@ -1,5 +1,6 @@
 #import <Cordova/CDVPlugin.h>
 #import <Cordova/CDVInvokedUrlCommand.h>
+#import "OutSystemsAppDelegate.h"
 
 @interface NativeSettings : CDVPlugin
 
