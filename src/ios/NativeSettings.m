@@ -1,6 +1,5 @@
 #import "NativeSettings.h"
 #import <Cordova/CDVPlugin.h>
-#import <Cordova/CDVPluginResult.h>
 
 @implementation NativeSettings
 /*

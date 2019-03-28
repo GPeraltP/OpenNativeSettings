@@ -2,7 +2,6 @@
 function NativeSettings() {}
 
 // The function that passes work along to native shells
-// Message is a string, duration may be 'long' or 'short'
 NativeSettings.prototype.open = function( setting, successCallback, errorCallback) {
   var options = {};
   options.setting = setting;
@@ -18,3 +17,5 @@ NativeSettings.install = function() {
   return window.plugins.nativeSettings;
 };
 cordova.addConstructor(NativeSettings.install);
+
+module.exports = NativeSettings;

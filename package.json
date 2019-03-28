@@ -14,9 +14,9 @@
     "url": "git+https://github.com/GPeraltP/OpenNativeSettings.git"
   },
   "keywords": [
-    "Settings",
     "ecosystem:cordova",
-    "cordova-android"
+    "cordova-android",
+    "cordova-ios"
   ],
   "engines": [
     {
