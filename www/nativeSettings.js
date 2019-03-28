@@ -2,7 +2,7 @@
 function NativeSettings() {}
 
 // The function that passes work along to native shells
-NativeSettings.prototype.open = function( setting, successCallback, errorCallback) {
+NativeSettings.open = function( setting, successCallback, errorCallback) {
   var options = {};
   options.setting = setting;
   cordova.exec(successCallback, errorCallback, 'NativeSettings', 'open', [options]);
